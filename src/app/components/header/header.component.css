@@ -1,0 +1,28 @@
+/* CSS for desktop view */
+.menu {
+  float: right;
+  margin-top: 20px;
+  list-style-type: none;
+}
+
+.menu li {
+  display: inline-block;
+  padding-right: 10px;
+}
+
+.username {
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+/* CSS for mobile view (max-width: 768px) */
+@media (max-width: 768px) {
+  .username {
+    display: none; /* Hide the username on small screens */
+  }
+  .hamburger-icon {
+    display: inline-block; /* Show the hamburger icon on small screens */
+  }
+}

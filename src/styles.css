@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    /* fonts */
+    --font-sofia-pro-soft: "Sofia Pro Soft";
+  
+    /* font sizes */
+    --font-size-xl: 20px;
+    --font-size-base: 16px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-darkslategray: #333;
+    --color-gray: #1f223b;
+    --color-black: #000;
+  }
+
+  body {
+    background-color: #F9F9F9;
+  }

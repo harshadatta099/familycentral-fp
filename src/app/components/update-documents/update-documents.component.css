@@ -1,0 +1,185 @@
+/* .center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  } */
+  
+.financial-planners-upload-do-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f9f9f9;
+    width: 1440px;
+    height: 932px;
+}
+.financial-planners-upload-do-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    width: 1440px;
+    height: 105px;
+}
+.financial-planners-upload-do-inner {
+    position: absolute;
+    top: 104.5px;
+    left: 185.5px;
+    border-top: 1px solid #f0edf3;
+    box-sizing: border-box;
+    width: 1255px;
+    height: 1px;
+    background-color: #F9F9F9;
+}
+.robinson {
+    position: absolute;
+    height: 1.29%;
+    width: 4.31%;
+    top: 4.94%;
+    left: 92.22%;
+    line-height: 30px;
+    font-weight: 500;
+    display: inline-block;
+}
+.profile-icon {
+    position: absolute;
+    top: 33px;
+    left: 1278px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.rectangle-div {
+    position: absolute;
+    top: 603px;
+    left: 221px;
+    border-radius: 8px;
+    background-color: #d9d9d9;
+    width: 638px;
+    height: 455px;
+    display: none;
+}
+.browse-files,
+.drag-and-drop {
+    position: absolute;
+    top: 155px;
+    left: 89px;
+    line-height: 32px;
+}
+.drag-and-drop {
+    top: 78px;
+    left: 0;
+    font-size: 35px;
+}
+.icon,
+.upload {
+    position: absolute;
+    top: 0;
+    left: 130px;
+    width: 67.52px;
+    height: 60px;
+}
+.upload {
+    left: 45px;
+    width: 326px;
+    height: 187px;
+    font-size: 26px;
+}
+.upload1 {
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 32.5px);
+    line-height: 27px;
+    font-weight: 500;
+}
+.record-a-video {
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    background-color: #f35564;
+    backdrop-filter: blur(15px);
+    width: 203px;
+    height: 48px;
+    overflow: hidden;
+}
+.buttons,
+.or1,
+.record-a-video {
+    position: absolute;
+}
+.buttons {
+    top: 221px;
+    left: 107px;
+    width: 203px;
+    height: 48px;
+    color: var(--color-white);
+}
+.or1 {
+    top: 0;
+    left: 199px;
+    line-height: 32px;
+}
+.or-child,
+.or-item {
+    position: absolute;
+    top: 16.5px;
+    left: -0.5px;
+    border-top: 1px solid var(--color-gray);
+    box-sizing: border-box;
+    width: 193px;
+    height: 1px;
+}
+.or-item {
+    left: 225.5px;
+}
+.or,
+.upload-parent {
+    position: absolute;
+    top: 117px;
+    left: 0;
+    width: 418px;
+    height: 32px;
+}
+.upload-parent {
+    top: 67px;
+    left: 135px;
+    height: 269px;
+}
+.container,
+.upload-documents {
+    position: absolute;
+    text-align: center;
+}
+.container {
+    top: 295px;
+    left: 416px;
+    border-radius: 12px;
+    background-color: var(--color-white);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 1px dashed var(--color-gray);
+    box-sizing: border-box;
+    width: 686px;
+    height: 402px;
+    overflow: hidden;
+    font-size: var(--font-size-xl);
+}
+.upload-documents {
+    top: 215px;
+    left: 445px;
+    font-size: 24px;
+    letter-spacing: 0.3px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 625px;
+    height: 57px;
+}
+.group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-gray);
+    width: 186px;
+    height: 932px;
+}

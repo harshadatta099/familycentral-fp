@@ -1,0 +1,199 @@
+ .group-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-gray);
+    width: 186px;
+    height: 100%;
+  }
+  
+  .logo-icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 125.05px;
+    height: 45px;
+    display: none;
+  }
+  
+  .family-central-white-1-icon {
+    position: absolute;
+    top: 23px;
+    left: 30px;
+    width: 106px;
+    height: 58.8px;
+    overflow: hidden;
+  }
+  
+  .group-item {
+    position: absolute;
+    top: 104.5px;
+    left: -0.5px;
+    border-top: 1px solid var(--color-darkslategray);
+    box-sizing: border-box;
+    width: 187px;
+    height: 1px;
+  }
+  
+  .group-icon3,
+  .profile {
+    position: absolute;
+    opacity: 0.7;
+  }
+  
+  .profile {
+    top: 144px;
+    left: 60px;
+    letter-spacing: 0.3px;
+    line-height: 22px;
+    font-weight: 500;
+    display: inline-block;
+    width: 76px;
+    height: 13px;
+  }
+  
+  .group-icon3 {
+    height: 1.84%;
+    width: 9.19%;
+    top: 20.06%;
+    right: 74.15%;
+    bottom: 78.1%;
+    left: 16.67%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  
+  .help,
+  .list-of-customers1,
+  .logout,
+  .settings,
+  .update-documents {
+    position: absolute;
+    top: 187px;
+    left: 60px;
+    letter-spacing: 0.3px;
+    line-height: 18px;
+    font-weight: 500;
+    display: inline-block;
+    width: 83px;
+    height: 28px;
+    opacity: 0.7;
+  }
+  
+  .help,
+  .logout,
+  .settings,
+  .update-documents {
+    top: 356px;
+    line-height: 22px;
+    width: 87px;
+    height: 13px;
+  }
+  
+  .help,
+  .logout,
+  .update-documents {
+    top: 308px;
+    width: 58px;
+  }
+  
+  .logout,
+  .update-documents {
+    top: 404px;
+    width: 83px;
+  }
+  
+  .update-documents {
+    top: 245px;
+    width: 95px;
+    height: 31px;
+  }
+  
+  .group-child1,
+  .group-inner {
+    position: absolute;
+    height: 1.84%;
+    width: 9.22%;
+    top: 15.12%;
+    right: 74.38%;
+    bottom: 83.04%;
+    left: 16.4%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    opacity: 0.7;
+  }
+  
+  .group-child1 {
+    width: 9.21%;
+    top: 32.83%;
+    right: 74.39%;
+    bottom: 65.34%;
+  }
+  
+  .group-child2,
+  .group-child3,
+  .group-icon4 {
+    position: absolute;
+    top: 353.44px;
+    left: 31px;
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+  }
+  
+  .group-child3,
+  .group-icon4 {
+    height: 1.72%;
+    width: 8.6%;
+    top: 43.13%;
+    right: 74.73%;
+    bottom: 55.15%;
+    left: 16.67%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+  }
+  
+  .group-icon4 {
+    height: 1.82%;
+    width: 9.14%;
+    top: 26.29%;
+    right: 74.19%;
+    bottom: 71.89%;
+  }
+  
+  .rectangle-parent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 186px;
+    height: 100%;
+    color: var(--color-white);
+  }
+  
+  body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+
+
+
+.nav-link {
+  font-family: 'Sofia Pro Soft', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.3px;
+  text-align: left;
+  color: #FFFFFF;
+  opacity: 70%;
+
+}
+
+
+
+
+
