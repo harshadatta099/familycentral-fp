@@ -1,59 +1,160 @@
-.profile{
-    margin-left: 200px;
+
+.account {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0;
+  background-color: white;
+  color: #1F223B;
+  width: 1097px;
+  padding: 20px;
+  float: none;
 }
-body h1 {
+
+.label-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-bottom: 15px;
+  flex-direction: column;
+  padding-left: 10px;
+  color: grey;
+  font-size: 20px;
+
+}
+
+
+.my-profile {
+  margin-left: 4%;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  /* margin: 0%; */
+}
+
+
+  .my-profile-heading {
     color: #1F223B;
-    float: left;
-    
+    padding-top: 6%;
+  }
+
+
+
+  .custom-button {
+    border-radius: 30px;
+    background: #F35564;
+    backdrop-filter: blur(7.5px);
+    display: flex;
+    width: 203px;
+    padding: 12px 0px 9px 0px;
+    justify-content: center;
+    align-items: center;
+    color: #fff; 
+    text-decoration: none;   
+    margin-top: 40px;
+    font-size: 25px;
 }
-.city {
+
+/* Add hover effect */
+.custom-button:hover {
+    background: #FF3B4A;
+
+}
+
+
+div p {
+  color: #1F223B;
+  font-size: 25px;
+}
+
+
+@media only screen and (max-width: 1680px) {
+
+  .account {
     background-color: white;
     color: #1F223B;
     width: 1097px;
-    height: 60%;
-    margin-top: 0%;
-    margin-right:24%;
     padding: 20px;
     float: right;
+  }
+  .my-profile-heading {
+    color: #1F223B;
+    padding-top: 2%;
+  }
+ 
+
+}
+@media only screen and (max-width: 1680px) {
+
+  .account {
+    background-color: white;
+    color: #1F223B;
+    width: 1097px;
+    padding: 20px;
+    float: right;
+  }
+  .my-profile-heading {
+    color: #1F223B;
+    margin-right: 73%;
+    padding-top: 2%;
+  }
+ 
+
+}
+
+
+@media only screen and (min-width: 1201px) and (max-width: 1680px) {
+  .account {
+    background-color: white;
+    color: #1F223B;
+    width: 915px;
+    padding: 20px;
+    float: right;
+  }
+  .my-profile-heading {
+    color: #1F223B;
+    padding-top: 2%;
+  }
+  .my-profile {
+    margin-left: 10%;
+  }
+}
+
+/* Medium screen */
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .account {
+    background-color: white;
+    color: #1F223B;
+    width: 724px;
+    padding: 20px;
+    float: right;
+  }
+  .my-profile-heading {
+    color: #1F223B;
+  }
+  .my-profile {
+    margin-left: 14%;
+  }
   
-  }
+}
 
-
-  .first{
-    margin-top: 0%;
-   list-style-type: none;
-   color:darkgrey;   
-   font-size:30px;
-   
-
-  }
-  .first li {
-    padding-bottom: 30px;
-  }
-  .first p {
+@media only screen and (min-width: 880px) and (max-width: 992px) {
+  .account {
+    background-color: white;
     color: #1F223B;
-    font-size: 25px;
+    width: 610px;
+    padding: 20px;
+    float: right;
   }
-  .second {
-    float:right;
-    margin-top: auto;
-    list-style-type: none;
-    padding-right: 10%;
-
+  .my-profile {
+    margin-left: 14%;
   }
-  .second p {
+  .my-profile-heading {
     color: #1F223B;
-    font-size: 25px;
+    text-align:right; 
+    padding-top: 2%;
   }
-
-  div h1 {
-    color: #1F223B;
-    text-align:right;
-    margin-right: 80%;
-  }
-
-
-
   .custom-button {
     border-radius: 30px;
     background: #F35564;
@@ -65,14 +166,69 @@ body h1 {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+    /* margin-left:230px; */
     color: #fff; 
-    text-decoration: none; 
-    margin-top: 150px;
+    text-decoration: none;   
+    margin-top: 20px
 }
 
-/* Add hover effect */
-.custom-button:hover {
-    background: #FF3B4A;
+ }
+
+@media only screen and (min-width: 768px) and (max-width: 880px) {
+
+  .account {
+    background-color: white;
+    color: #1F223B;
+    width: 610px;
+    padding: 20px;
+    float: right;
+  }
+  .my-profile-heading {
+    color: #1F223B;
+    text-align:right;
+    margin-right: 54%;
+    padding-top: 2%;
+  }
+  .my-profile {
+    margin-left: 10%;
+  }
 }
+
+@media only screen and (max-width: 768px)
+
+{
+  .my-profile {
+    /* padding: 15px; */
+    margin:0;
+    max-width: 100%;
+    padding:0%;
+}
+
+  .account{
+   
+    /* margin-bottom: 12px; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* max-height: 380px; */
+    float:none;
+    
+  }
+  .label-group  {
+    justify-content: space-between;
+    width:100%;
+    
+  }
+  .my-profile-heading{
+    color: #1F223B;
+    text-align: left;
+    margin-right: 0;
+    /* padding-top: 6%; */
+}
+.custom-button {
+  width: 100%;
+}
+}
+
 
 
