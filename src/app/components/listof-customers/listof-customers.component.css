@@ -1,44 +1,10 @@
-*{
-  margin: 0;
-  padding:0;
+@media only screen and (min-width:1200px) and (min-width:1400px) {
+    .ml {
+        margin-left:10%;
+    }
 }
-
-.custom-button {
-    width: 203px;
-    height: 48px;
-    top: 299px;
-    left: 221px;
-    padding: 12px 0px 9px 0px;
-    border-radius: 30px;
-    background-color: #F35564; 
-    color: white; 
-    font-weight: bold; 
-    border: none; 
-    outline: none; 
-    cursor: pointer; 
-    margin-left: 35px;
-  }
-  
- 
-  .custom-button:hover {
-    background-color: #E54251; 
-  }
-  
-  .custom-button:active {
-    background-color: #D53443; 
-  }
- 
-  .bg{
-    background-color: #F9F9F9;
-    /* margin:0;
-    padding: 0; */
-  }
-
-
-.table-responsive{
-  margin-right:99px;
-  
-} 
- .table{
-  margin-bottom:0;
+@media only screen and (min-width:1401px) {
+    .ml {
+        margin-left:5%;
+    }
 }

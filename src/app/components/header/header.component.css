@@ -17,12 +17,49 @@
   padding-right: 30px;
 }
 
-/* CSS for mobile view (max-width: 768px) */
+
 @media (max-width: 768px) {
   .username {
-    display: none; /* Hide the username on small screens */
+    display: none; 
   }
   .hamburger-icon {
-    display: inline-block; /* Show the hamburger icon on small screens */
+    display: inline-block; 
   }
 }
+@media only screen and (min-width: 769px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+.sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  padding: 0 20px;
+}
+
+.sidebar a {
+  color: #1F223B;
+  text-decoration: none;
+}
+
+

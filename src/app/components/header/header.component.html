@@ -1,4 +1,4 @@
-<header>
+<header >
   <ul style="float: right; margin-top: 20px; ">
     <li style="display: inline-block; padding-right: 10px">
       <img src="../../../assets/profile.png"  height="40" width="40"/>
@@ -6,9 +6,21 @@
     
     <li style="display: inline-block; color: black solid;font-weight: 400; font-size: 16px; padding-right: 30px; ">Robinson</li>    
     
-    <li style="display: inline-block; padding-right: 10px">
-      <img src="../../../assets/hamburger.svg"  height="20" width="20" id="hamburger"/>
+    <li style="display: inline-block; padding-right: 10px;">
+      
+        <img src="../../../assets/hamburger.svg" height="20" width="20" id="hamburger" (click)="toggleSidebar()" />
+      
     </li>
   </ul>
-  
+  <nav class="sidebar text-center" [ngClass]="{'active': isSidebarOpen}">
+    <ul>
+      <li><a routerLink="/profile">profile</a></li>
+      <li><a routerLink="/listofcustomers">List of Customers</a></li>
+      <li><a routerLink="/settings">Update documents</a></li>
+      <li><a routerLink="/help">Help</a></li>
+      <li><a routerLink="/logout">Settings</a></li>
+      <li><a routerLink="/updatedocuments">Logout</a></li>
+      
+    </ul>
+  </nav>
 </header>

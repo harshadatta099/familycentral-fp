@@ -1,26 +1,23 @@
 <div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2 col-sm-2">
-      <app-sidebar></app-sidebar>
-    </div>
-    <div class="col-md-12">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <app-header></app-header>
-          </div>
-         
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-1">
+            <app-sidebar></app-sidebar>
         </div>
-        <div class="row">
-          <div class="col-md-12 offset-md-1">
-             
-            
-            <router-outlet></router-outlet>
-          
-          </div>
-        </div>
-      </div>
 
-      </div>
-</div>
+        <div class="col-md-11 ">
+            <div class="row" style="background-color: #FFFF;">
+                <div class="col">
+                    <app-header></app-header>
+                </div>
+            </div>
+
+            
+            <div class="row">
+                <div class="ml col offset-md-1  justify-content-md-center">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -1,94 +1,63 @@
-<div class="bg  " style="min-height: calc(100vh - 105px);margin-left: 35px;">
-      <div class="row">
-        <div class="col">
-          <h1 class="heading" style="margin-top:35px;">List of Customers</h1>
-          <div class="fs-5" style="margin-top: 25px; ">
-            <!-- Conditionally render the table or text -->
-            <ng-container *ngIf="showTable; else showText">
-              <!-- Render the table when showTable is true -->
-              <!-- Replace this with your actual table structure -->
-              <div class="table-responsive">
-                <table class="table border">
-                  <thead>
-                    <tr>
-                      <th scope="col">Names</th>
-                      <th scope="col">Phone Number</th>
-                      <th scope="col">Email</th>
-                      <th scope="col">Documents</th>
-                      <th scope="col">Edit/Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Add table rows and data here -->
-                    <tr>
-                      <td>James Anderson</td>
-                      <td>993322884412</td>
-                      <td>james@gmail.com</td>
-                      <td>
-                        bills.jpg
-                        <a href="" class="me-2">
-                          <img src="../../../assets/download.svg" alt="not found">
-                        </a>
-                      </td>
-                      <td>
-                        <a href="#" class="me-5">
-                          <img src="../../../assets/edit.svg" alt="Edit" class="icon">
-                        </a>
-                        <a href="#">
-                          <img src="../../../assets/delete.svg" alt="Delete" class="icon">
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>John N</td>
-                      <td>993322884412</td>
-                      <td>john@gmail.com</td>
-                      <td>
-                        bills.jpg
-                        <img src="../../../assets/download.svg" alt="not found">
-                      </td>
-                      <td>
-                        <a href="#" class="me-5">
-                          <img src="../../../assets/edit.svg" alt="Edit" class="icon">
-                        </a>
-                        <a href="#">
-                          <img src="../../../assets/delete.svg" alt="Delete" class="icon">
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Maria hills</td>
-                      <td>993322884412</td>
-                      <td>maria@gmail.com</td>
-                      <td>
-                        bills.jpg
-                        <img src="../../../assets/download.svg" alt="not found">
-                      </td>
-                      <td>
-                        <a href="#" class="me-5">
-                          <img src="../../../assets/edit.svg" alt="Edit" class="icon">
-                        </a>
-                        <a href="#">
-                          <img src="../../../assets/delete.svg" alt="Delete" class="icon">
-                        </a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              
-            </ng-container>
-            <ng-template #showText>
-              You don't have any customer list. Please add a list.
-            </ng-template>
-          </div>
-        </div>
-      </div>
-      <div class="row" [style.margin-top.px]="showTable ? 252 : 40">
-        <div class="col">
-          <button class="btn custom-button">Add</button>
-        </div>
-      </div>
+<div class="ml offset-md-1 offset-lg-1">
+  <div class="mt-5"><h1>List of Customers</h1></div>
+  <div  class="row mt-4">
+    <div class="col-md-11 ">
+      <table class="table border">
+        <thead>
+          <tr>
+            
+            <th scope="col">Names</th>
+            <th scope="col">Phone number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Documents</th>
+            <th scope="col">Edit/Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            
+            <td>James Anderson</td>
+            <td>993322884412</td>
+            <td>james@gmail.com</td>
+            <td>
+              <span style="margin-right: 45px;">bills.jpg</span>
+              <img src="../../../assets/download.svg" alt="">
+            </td>
+            <td>
+              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
+              <img src="../../../assets/delete.svg" alt="">
+            </td>
+          </tr>
+          <tr>
+            
+            <td>John N</td>
+            <td>993322884412</td>
+            <td>james@gmail.com</td>
+            <td>
+              <span style="margin-right: 45px;">bills.jpg</span>
+              <img src="../../../assets/download.svg" alt="">
+            </td>
+            <td>
+              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
+              <img src="../../../assets/delete.svg" alt="">
+            </td>
+          </tr>
+          <tr>
+            
+            <td>Maria hills</td>
+            <td>993322884412</td>
+            <td>maria@gmail.com</td>
+            <td>
+              <span style="margin-right: 45px;">bills.jpg</span>
+              <img src="../../../assets/download.svg" alt="">
+            </td>
+            <td>
+              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
+              <img src="../../../assets/delete.svg" alt="">
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  
-  
+  </div>
+</div>
