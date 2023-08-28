@@ -1,3 +1,4 @@
+/* Default styles for larger screens */
 .centered-line {
     text-align: center;
     position: relative;
@@ -28,7 +29,8 @@
     background-color: white;
     padding: 0 10px;
 }
-.card-title{
+
+.card-title {
     height: 32px;
     top: 145px;
     left: 180px;
@@ -41,17 +43,15 @@
     margin-top: 18px;
 }
 
-.card-text{
-   
+.card-text {
     font-family: 'Sofia Pro Soft', sans-serif;
     font-size: 26px;
     font-weight: 400;
 }
+
 .custom-button {
     width: 203px;
     height: 48px;
-   
-   
     border-radius: 30px;
     background-color: #F35564;
     border: none;
@@ -63,4 +63,85 @@
 .custom-button:hover {
     background-color: #FF6B7D;
     cursor: pointer;
+}
+
+.text {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/* Media query for medium-sized screens */
+@media (max-width: 992px) {
+    .col {
+        position: relative;
+        width: 100%;
+        margin-left: 0; /* Remove the left margin */
+        padding: 0 20px; /* Add some horizontal padding */
+    }
+
+    /* Adjust the absolute positioning for medium screens */
+    .col > div {
+        width: 100%;
+        height: auto;
+        top: 25%; 
+        margin-left: 0; /* Remove margin */
+    }
+
+    .card {
+        padding: 30px; /* Adjust padding as needed */
+    }
+
+    .card-title {
+        font-size: 32px; /* Adjust font size as needed */
+        top: auto; /* Remove the top position */
+        left: auto; /* Remove the left position */
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    .card-text {
+        font-size: 24px; /* Adjust font size as needed */
+    }
+
+    .custom-button {
+        width: 100%; /* Make the button full width */
+        height: 48px;
+    }
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .col {
+        position: relative;
+        width: 100%;
+        margin-left: 0; /* Remove the left margin */
+        padding: 0 10px; /* Add some horizontal padding */
+    }
+
+    /* Adjust the absolute positioning for small screens */
+    .col > div {
+        width: 100%;
+        height: auto;
+        top: 10vh; /* Adjust the top position as needed */
+        margin-left: 0; /* Remove margin */
+    }
+
+    .card {
+        padding: 20px; /* Adjust padding as needed */
+    }
+
+    .card-title {
+        font-size: 24px; /* Adjust font size as needed */
+        top: auto; /* Remove the top position */
+        left: auto; /* Remove the left position */
+        margin-top: 10px; /* Adjust margin as needed */
+    }
+
+    .card-text {
+        font-size: 20px; /* Adjust font size as needed */
+    }
+
+    .custom-button {
+        width: 100%; /* Make the button full width */
+        height: 48px;
+    }
 }
