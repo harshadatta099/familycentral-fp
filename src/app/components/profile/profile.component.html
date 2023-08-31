@@ -1,31 +1,29 @@
 <div class="my-profile">
-       <div class="my-profile-heading" >
-              <h1>My Profile</h1>
-      </div>
+       <div class="my-profile-heading">
+         <h1>My Profile</h1>
+       </div>
        <div class="account">
-
-              <div class="label-group">
-                     <label> First Name</label>
-                     <p><b>Henry</b></p>
-              </div>
-              <div class="label-group">
-                     <label> Last Name</label>
-                     <p><b>Robinson</b></p>
-              </div>
-              <div class="label-group">
-                     <label> Phone number</label>
-                     <p><b>+91 80196 22257</b></p>
-              </div>
-              <div class="label-group">
-                     <label> Email</label>
-                     <p><b>robinson@gmail.com</b> </p>
-              </div>
-              <div class="label-group">
-                     <label> Company Name</label>
-                     <p><b>abc</b></p>
-              </div>
-
+         <div class="label-group">
+           <label>First Name</label>
+           <p><b>{{ data?.data.firstName }}</b></p> 
+         </div>
+         <div class="label-group">
+           <label>Last Name</label>
+           <p><b>{{ data?.data.lastName }}</b></p> 
+         </div>
+         <div class="label-group">
+           <label>Phone number</label>
+           <p><b>{{ data?.data.phoneNumber }}</b></p> 
+         </div>
+         <div class="label-group">
+           <label>Email</label>
+           <p><b>{{ data?.data.email }}</b></p> 
+         </div>
+         <div class="label-group">
+           <label>Company Name</label>
+           <p><b>{{ data?.data.companyName }}</b></p> 
+         </div>
        </div>
        <a href="#" class="custom-button">Edit</a>
-
-</div>
+     </div>
+     

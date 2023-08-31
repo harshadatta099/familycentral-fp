@@ -1,63 +1,51 @@
 <div class="ml offset-md-1 offset-lg-1">
   <div class="mt-5"><h1>List of Customers</h1></div>
-  <div  class="row mt-4">
-    <div class="col-md-11 ">
-      <table class="table border">
-        <thead>
-          <tr>
-            
-            <th scope="col">Names</th>
-            <th scope="col">Phone number</th>
-            <th scope="col">Email</th>
-            <th scope="col">Documents</th>
-            <th scope="col">Edit/Delete</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            
-            <td>James Anderson</td>
-            <td>993322884412</td>
-            <td>james@gmail.com</td>
-            <td>
-              <span style="margin-right: 45px;">bills.jpg</span>
-              <img src="../../../assets/download.svg" alt="">
-            </td>
-            <td>
-              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
-              <img src="../../../assets/delete.svg" alt="">
-            </td>
-          </tr>
-          <tr>
-            
-            <td>John N</td>
-            <td>993322884412</td>
-            <td>james@gmail.com</td>
-            <td>
-              <span style="margin-right: 45px;">bills.jpg</span>
-              <img src="../../../assets/download.svg" alt="">
-            </td>
-            <td>
-              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
-              <img src="../../../assets/delete.svg" alt="">
-            </td>
-          </tr>
-          <tr>
-            
-            <td>Maria hills</td>
-            <td>993322884412</td>
-            <td>maria@gmail.com</td>
-            <td>
-              <span style="margin-right: 45px;">bills.jpg</span>
-              <img src="../../../assets/download.svg" alt="">
-            </td>
-            <td>
-              <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
-              <img src="../../../assets/delete.svg" alt="">
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="row mt-4">
+    <div class="col-md-11">
+      <ng-container *ngIf="data?.data.length > 0; else noData">
+        <table class="table border">
+          <thead>
+            <tr>
+              
+              <th scope="col">Names</th>
+              <th scope="col">Phone number</th>
+              <th scope="col">Email</th>
+              <th scope="col">Documents</th>
+              <th scope="col">Edit/Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of data.data">
+              <td>{{ customer?.firstName }} {{ customer?.lastName }}</td>
+              <td>{{ customer?.phoneNumber }}</td>
+              <td>{{ customer?.email }}</td>
+              
+              <td>
+                <span style="margin-right: 45px;">bills.jpg</span>
+                <img src="../../../assets/download.svg" alt="">
+              </td>
+              <td>
+                <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
+                
+                  <img
+                    src="../../../assets/delete.svg"
+                    alt="Delete"
+                    (click)="deleteCustomer(customer.id)"
+                    style="cursor: pointer;"
+                  />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </ng-container>
+      <div class="custombtn">
+        <a href="#" class="custom-button" routerLink="/addcustomer">Add</a>
+      </div>
+      <ng-template #noData>
+        <p class="fs-2">You don't have any customers list. Please add a list.</p>
+        
+      </ng-template>
     </div>
   </div>
 </div>
