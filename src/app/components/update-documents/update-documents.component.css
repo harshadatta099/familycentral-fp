@@ -1,130 +1,343 @@
 /* Default styles for larger screens */
+
 .centered-line {
+
     text-align: center;
+
     position: relative;
+
     margin: 20px 0;
+
 }
+
 .centered-line::before,
 .centered-line::after {
+
     content: "";
+
     position: absolute;
+
     top: 50%;
+
     width: 45%;
+
     height: 1px;
+
     background-color: #999;
+
 }
+
+ 
+
 .centered-line::before {
+
     left: 0;
+
 }
+
+ 
+
 .centered-line::after {
+
     right: 0;
+
 }
+
+ 
+
 .centered-text {
+
     position: relative;
+
     z-index: 1;
+
     background-color: white;
+
     padding: 0 10px;
+
 }
+
+ 
+
 .card-title {
+
     height: 32px;
+
     top: 145px;
+
     left: 180px;
+
     font-family: 'Sofia Pro Soft', sans-serif;
+
     font-size: 25px;
+
     font-weight: 700;
+
     line-height: 32px;
+
     letter-spacing: 0px;
+
     text-align: center;
+
     margin-top: 18px;
+
 }
+
+  
+
 .card-text {
+
     font-family: 'Sofia Pro Soft', sans-serif;
+
     font-size: 26px;
+
     font-weight: 400;
+
 }
+
+ 
+
 .custom-button {
+
     width: 203px;
+
     height: 48px;
+
     border-radius: 30px;
+
     background-color: #F35564;
+
     border: none;
+
     color: #fff;
+
     font-weight: 400;
+
     font-size: 20px;
+
 }
+
+ 
+
 .custom-button:hover {
+
     background-color: #FF6B7D;
+
     cursor: pointer;
+
 }
+
+ 
+
 .text {
+
     font-size: 24px;
+
     font-weight: 400;
+
 }
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 8px 20px;
+     /*background-color: #337ab7; */
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .drop-area {
+    /* width: 300px;
+    height: 150px; */
+    /* border: 2px dashed #ccc; */
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .drop-area.drag-over {
+    border-color: #4caf50;
+    background-color: #f0f8ff; /* Example background color */
+  }
+  
+  .file-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .file {
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+  }
+  
+ 
+  
+  
 /* Media query for medium-sized screens */
+
 @media (max-width: 992px) {
+
     .col {
+
         position: relative;
+
         width: 100%;
+
         margin-left: 0; /* Remove the left margin */
+
         padding: 0 20px; /* Add some horizontal padding */
+
     }
+
+ 
+
     /* Adjust the absolute positioning for medium screens */
+
     .col > div {
+
         width: 100%;
+
         height: auto;
+
         top: 25%;
+
         margin-left: 0; /* Remove margin */
+
     }
+
+ 
+
+   
+
+ 
+
     .card-title {
+
         /* Adjust font size as needed */
+
         top: auto; /* Remove the top position */
+
         left: auto; /* Remove the left position */
+
         margin-top: 10px; /* Adjust margin as needed */
+
     }
+
+ 
+
     .card-text {
+
         font-size: 24px; /* Adjust font size as needed */
+
     }
+
+ 
+
     .custom-button {
+
         width: 100%; /* Make the button full width */
+
         height: 48px;
+        /* margin-top: 20px; */
+
     }
+
 }
+
+ 
+
 /* Media query for small screens */
+
 @media (max-width: 768px) {
+
     .col {
+
         position: relative;
+
         width: 100%;
+
         margin-left: 0; /* Remove the left margin */
+
         padding: 0 10px; /* Add some horizontal padding */
+
     }
+
+ 
+
     /* Adjust the absolute positioning for small screens */
+
     .col > div {
+
         width: 100%;
+
         height: auto;
+
         top: 10vh; /* Adjust the top position as needed */
+
         margin-left: 0; /* Remove margin */
+
     }
+
+ 
+
+   
+
+ 
+
     .card-title {
+
         font-size: 18px; /* Adjust font size as needed */
+
         top: auto; /* Remove the top position */
+
         left: auto; /* Remove the left position */
+
         margin-top: 10px; /* Adjust margin as needed */
+
     }
+
+ 
+
     .card-text {
+
         font-size: 20px; /* Adjust font size as needed */
+
     }
+
+ 
+
     .custom-button {
+
         width: 100%; /* Make the button full width */
+
         height: 48px;
+
     }
+
 }
+
 @media only screen and (max-width: 512px) {
+
     element.style {
+
         width: 108%;
+
         height: 85%;
+
         border-radius: 12px;
+
         border: 1px solid;
+
         border-style: dashed;
+
         padding: 23% 0%;
+
     }
+
+   
+
 }
+
+ 
