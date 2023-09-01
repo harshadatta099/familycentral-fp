@@ -55,6 +55,9 @@
 }
 @media (min-width:768px)
 {
+  .body-container-2 {
+    margin-left: 60px;
+  }
   .body-container-2-formblock {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -190,3 +193,10 @@
   Left:221px;
   border-radius:30px
 }
+.error-message {
+
+  color:red;
+
+}
+
+

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FileUploadService } from 'src/app/file-upload.service';
+import { ApiService } from 'src/app/api.service';
+
 
  
 
@@ -16,8 +17,8 @@ export class UpdateDocumentsComponent {
 
 
   formData: any = {
-    FamilyId: '3fa85f64-5717-4562-b3fc-2c963f66afa6',
-    UserId: '3fa85f64-5717-4562-b3fc-2c963f66afa6', // You might get this dynamically
+    FamilyId: '1b93d0fc-b28a-4c3e-a9bc-018a44c6a100',
+    UserId: 'ee8f2658-7576-4349-ddcd-08dba8b3103c', // You might get this dynamically
     FileName: this.selectedfile?.name || "",
     Thumbnail: false,
     Scan: false
@@ -25,7 +26,7 @@ export class UpdateDocumentsComponent {
 
  
 
-  constructor(private fileUploadService: FileUploadService) { }
+  constructor(private fileUploadService: ApiService) { }
 
  
 
