@@ -4,30 +4,36 @@
   </div>
   <div class="body-container-2-formblock">
     <div class="form-item">
-      <input type="text" id="input1" name="First name" placeholder="First name">
+      <input type="text" id="firstName" placeholder="First name" (blur)="validateFirstName()">
+      <div *ngIf="firstNameError" class="error-message">{{ firstNameError }}</div>
     </div>
     <div class="form-item">
-      <input type="text" id="input2" name="input2" placeholder="Last name">
+      <input type="text" id="lastName" placeholder="Last name" (blur)="validateLastName()">
+      <div *ngIf="lastNameError" class="error-message">{{ lastNameError }}</div>
     </div>
     <div class="form-item">
-      <input type="text" id="input3" name="input3" placeholder="Phone Number">
+      <input type="text" id="phoneNumber" placeholder="Phone Number" (blur)="validatePhoneNumber()">
+      <div *ngIf="phoneNumberError" class="error-message">{{ phoneNumberError }}</div>
     </div>
     <div class="form-item">
-      <input type="text" id="input4" name="input4" placeholder="Email">
+      <input type="text" id="email" placeholder="Email" (blur)="validateEmail()">
+      <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
     </div>
     <div class="form-item form-item-5">
-      <textarea id="input5" name="Message" rows="5" cols="160" placeholder="Message"></textarea>
-    </div>
-    <div class="form-item form-item-5">
-      <textarea id="input51" name="Message" rows="5" cols="50" placeholder="Message"></textarea>
+      <textarea id="message" rows="5" cols="160" placeholder="Message"></textarea>
     </div>
   </div>
   <div class="upload-Document">
-    <p><span><a href="#" target="_self" style="color:rgba(6, 184, 255, 1);">Upload Document if any...</a></span>(
-      optional )</p>
+    <!-- <p><span><a href="#" target="_self" style="color:rgba(6, 184, 255, 1);">Upload Document if any...</a></span>(
+      optional )</p> -->
+      <label for="selectFile" class="custom-file-upload" style="text-align: center;" >
+        Upload Document if any...
+      </label>
+      <input type="file" id="selectFile" #selectFile style="display:none;" (change)="onFileSelected($event)">
+
   </div>
   <div class="save">
-    <button type="button" class="save-button">save</button>
-    <button type="button" class="Cancle-button">Cancle</button>
+    <button type="button" class="save-button" (click)="uploadFile()" routerLink="/listofcustomers">Save</button>
+    <button type="button" class="Cancle-button" routerLink="/listofcustomers">Cancel</button>
   </div>
 </div>
