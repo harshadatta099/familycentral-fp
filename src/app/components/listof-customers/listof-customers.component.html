@@ -1,12 +1,14 @@
 <div class="ml offset-md-1 offset-lg-1">
-  <div class="mt-5"><h1>List of Customers</h1></div>
+  <div class="mt-5">
+    <h1>List of Customers</h1>
+  </div>
   <div class="row mt-4">
     <div class="col-md-11">
       <ng-container *ngIf="data?.data.length > 0; else noData">
         <table class="table border">
           <thead>
             <tr>
-              
+
               <th scope="col">Names</th>
               <th scope="col">Phone number</th>
               <th scope="col">Email</th>
@@ -19,33 +21,64 @@
               <td>{{ customer?.firstName }} {{ customer?.lastName }}</td>
               <td>{{ customer?.phoneNumber }}</td>
               <td>{{ customer?.email }}</td>
-             
+              
               <td>
                 <span style="margin-right: 45px;">bills.jpg</span>
                 <img src="../../../assets/download.svg" alt="">
               </td>
-              <td>
-                <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;">
-                
-                  <img
-                    src="../../../assets/delete.svg"
-                    alt="Delete"
-                    (click)="deleteCustomer(customer.id)"
-                    style="cursor: pointer;"
-                  />
+              <td >
+                <img src="../../../assets/edit.svg" alt="" style="margin-right: 45px;cursor: pointer;" (click)="openPopup(customer.id)" >
+
+                <img src="../../../assets/delete.svg" alt="Delete" (click)="deleteCustomer(customer.id)"
+                  style="cursor: pointer;" />
               </td>
             </tr>
           </tbody>
         </table>
-        
+
       </ng-container>
       <div class="custombtn">
         <a href="#" class="custom-button" routerLink="/addcustomer">Add</a>
       </div>
       <ng-template #noData>
         <p class="fs-2">You don't have any customers list. Please add a list.</p>
-        
       </ng-template>
     </div>
   </div>
 </div>
+
+<!-- edit button -->
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Customer</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <p>Name</p>
+          <input type="text" class="box" value="{{this.name}}" disabled>
+         
+          <p>Phone</p>
+          <input type="text" class="box" value="{{this.phone}}" disabled>
+          
+          <p>Email</p>
+          <input type="email" class="box" value="{{this.email}}" disabled>
+          
+          <p>Documents</p>
+          <input type="text" class="box" value="">
+        </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="closePopup()">
+          Cancel
+        </button>
+        <button type="button" class="btn btn-danger" (click)="closePopup()" (click)="editDetails()" >
+          Save Changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- edit button -->

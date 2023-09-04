@@ -44,7 +44,8 @@
 }
 
 .sidebar.active {
-  left: 0;
+  left: 0px;
+  background-color: #1F223B;
 }
 
 .sidebar ul {
@@ -58,7 +59,7 @@
 }
 
 .sidebar a {
-  color: #1F223B;
+  color: #fff;
   text-decoration: none;
 }
 
