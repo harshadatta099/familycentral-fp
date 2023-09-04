@@ -8,6 +8,10 @@ import { ApiService } from 'src/app/api.service';
 })
 export class ProfileComponent implements OnInit {
   data:any;
+  firstNameError: string = '';
+  lastNameError: string = '';
+  phoneNumberError: string = '';
+  emailError: string = '';
 
   constructor(private apiService :ApiService) {}
 
@@ -23,4 +27,35 @@ export class ProfileComponent implements OnInit {
       }
     );
   }
+  displayStyle = "none";
+  
+  openPopup() {
+    this.displayStyle = "block";
+  }
+  closePopup() {
+    this.displayStyle = "none";
+  }
+  validateFirstName() {
+
+    const firstName = (document.getElementById("firstName") as HTMLInputElement).value;
+    this.firstNameError = firstName.trim() === '' ? 'First name is required.' : '';
+  }
+
+  validateLastName() {
+    const lastName = (document.getElementById("lastName") as HTMLInputElement).value;
+    this.lastNameError = lastName.trim() === '' ? 'Last name is required.' : '';
+  }
+
+  validatePhoneNumber() {
+    const phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value;
+    const phoneNumberPattern = /^[0-9]{10}$/;
+    this.phoneNumberError = !phoneNumber.match(phoneNumberPattern) ? 'Please enter a valid 10-digit phone number.' : '';
+  }
+
+  validateEmail() {
+    const email = (document.getElementById("email") as HTMLInputElement).value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    this.emailError = !email.match(emailPattern) ? 'Please enter a valid email address.' : '';
+  }
+
 }

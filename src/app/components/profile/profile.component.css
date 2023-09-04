@@ -23,6 +23,30 @@
 
 }
 
+/* Add this CSS to your stylesheet */
+
+/* Label styles */
+.modal-body label {
+  display: block;
+  text-align: left;
+  color:#1F223B;
+  font-weight: bold;
+}
+
+/* Input field styles */
+.modal-body input.form-control {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Adjust spacing between form elements if needed */
+.modal-body .form-group {
+  margin-bottom: 20px;
+}
+
 
 .my-profile {
   margin-left: 4%;
@@ -53,13 +77,34 @@
     text-decoration: none;   
     margin-top: 40px;
     font-size: 25px;
+    border: none;
 }
-
+.modal {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.error-message{
+  color: red;
+  text-align: left;
+  font-weight: normal;
+}
 /* Add hover effect */
 .custom-button:hover {
     background: #FF3B4A;
 
 }
+
 
 
 div p {

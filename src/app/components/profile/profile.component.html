@@ -1,29 +1,72 @@
 <div class="my-profile">
-       <div class="my-profile-heading">
-         <h1>My Profile</h1>
-       </div>
-       <div class="account">
-         <div class="label-group">
-           <label>First Name</label>
-           <p><b>{{ data?.data.firstName }}</b></p> 
-         </div>
-         <div class="label-group">
-           <label>Last Name</label>
-           <p><b>{{ data?.data.lastName }}</b></p> 
-         </div>
-         <div class="label-group">
-           <label>Phone number</label>
-           <p><b>{{ data?.data.phoneNumber }}</b></p> 
-         </div>
-         <div class="label-group">
-           <label>Email</label>
-           <p><b>{{ data?.data.email }}</b></p> 
-         </div>
-         <div class="label-group">
-           <label>Company Name</label>
-           <p><b>{{ data?.data.companyName }}</b></p> 
-         </div>
-       </div>
-       <a href="#" class="custom-button">Edit</a>
-     </div>
-     
+  <div class="my-profile-heading">
+    <h1>My Profile</h1>
+  </div>
+  <div class="account">
+    <div class="label-group">
+      <label>First Name</label>
+      <p><b>{{ data?.data.firstName }}</b></p>
+    </div>
+    <div class="label-group">
+      <label>Last Name</label>
+      <p><b>{{ data?.data.lastName }}</b></p>
+    </div>
+    <div class="label-group">
+      <label>Phone number</label>
+      <p><b>{{ data?.data.phoneNumber }}</b></p>
+    </div>
+    <div class="label-group">
+      <label>Email</label>
+      <p><b>{{ data?.data.email }}</b></p>
+    </div>
+    <div class="label-group">
+      <label>Company Name</label>
+      <p><b>{{ data?.data.companyName }}</b></p>
+    </div>
+  </div>
+  <button class="custom-button" (click)="openPopup()">Edit</button>
+</div>
+
+
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="firstName" >First Name:</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" (blur)="validateFirstName()">
+            <div *ngIf="firstNameError" class="error-message" >{{ firstNameError }}</div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name:</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter your last name" (blur)="validateLastName()">
+            <div *ngIf="lastNameError" class="error-message">{{ lastNameError }}</div>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" class="form-control" id="phoneNumber" placeholder="Enter your phone number" (blur)="validatePhoneNumber()">
+            <div *ngIf="phoneNumberError" class="error-message">{{ phoneNumberError }}</div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" (blur)="validateEmail()">
+            <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+          </div>
+          <div class="form-group">
+            <label for="companyName">Company Name:</label>
+            <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger mr-2" (click)="closePopup()">
+          Save
+        </button>
+        <button type="button" class="btn btn-danger" (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
