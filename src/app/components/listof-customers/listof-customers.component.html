@@ -57,24 +57,24 @@
       <div class="modal-body">
         <form>
           <p>Name</p>
-          <input type="text" class="box" value="{{this.name}}" disabled>
+          <input type="text" class="box form-control" value="{{this.name}}" disabled>
          
           <p>Phone</p>
-          <input type="text" class="box" value="{{this.phone}}" disabled>
+          <input type="text" class="box  form-control" value="{{this.phone}}" disabled>
           
           <p>Email</p>
-          <input type="email" class="box" value="{{this.email}}" disabled>
+          <input type="email" class="box form-control" value="{{this.email}}" disabled>
           
           <p>Documents</p>
-          <input type="text" class="box" value="">
+          <input type="text" class="box form-control" value="">
         </form>
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger mb-2" (click)="closePopup()">
+        <button type="button" class="btn btn-outline-danger btn-rounded mb-2" (click)="closePopup()">
           Cancel
         </button>
-        <button type="button" class="btn btn-danger" (click)="closePopup()" (click)="editDetails()" >
+        <button type="button" class="btn btn-outline-primary btn-rounded" (click)="closePopup()" (click)="editDetails()" >
           Save Changes
         </button>
       </div>
