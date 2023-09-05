@@ -33,28 +33,45 @@ export class AddcustomerComponent {
     familyGroupName: '',
   };
 
-  validateFirstName() {
+  isSaveButtonDisabled: boolean = true;
 
+  validateFirstName() {
     const firstName = (document.getElementById("firstName") as HTMLInputElement).value;
     this.firstNameError = firstName.trim() === '' ? 'First name is required.' : '';
+    this.updateSaveButtonState();
   }
-
+  
   validateLastName() {
     const lastName = (document.getElementById("lastName") as HTMLInputElement).value;
     this.lastNameError = lastName.trim() === '' ? 'Last name is required.' : '';
+    this.updateSaveButtonState();
   }
-
+  
   validatePhoneNumber() {
     const phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value;
     const phoneNumberPattern = /^[0-9]{10}$/;
     this.phoneNumberError = !phoneNumber.match(phoneNumberPattern) ? 'Please enter a valid 10-digit phone number.' : '';
+    this.updateSaveButtonState();
   }
-
+  
   validateEmail() {
     const email = (document.getElementById("email") as HTMLInputElement).value;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     this.emailError = !email.match(emailPattern) ? 'Please enter a valid email address.' : '';
+    this.updateSaveButtonState();
   }
+  
+  updateSaveButtonState() {
+    const firstName = (document.getElementById("firstName") as HTMLInputElement).value.trim();
+    const lastName = (document.getElementById("lastName") as HTMLInputElement).value.trim();
+    const phoneNumber = (document.getElementById("phoneNumber") as HTMLInputElement).value.trim();
+    const email = (document.getElementById("email") as HTMLInputElement).value.trim();
+  
+    // Check if all required fields are empty
+    this.isSaveButtonDisabled = firstName === '' || lastName === '' || phoneNumber === '' || email === '';
+  }
+  
+  
 
 
   constructor(private fileUploadService: ApiService) { }

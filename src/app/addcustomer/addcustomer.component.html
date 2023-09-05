@@ -4,15 +4,15 @@
   </div>
   <div class="body-container-2-formblock">
     <div class="form-item">
-      <input type="text" id="firstName" placeholder="First name" (blur)="validateFirstName()">
+      <input type="text" id="firstName" placeholder="First name" (blur)="validateFirstName()" required>
       <div *ngIf="firstNameError" class="error-message">{{ firstNameError }}</div>
     </div>
     <div class="form-item">
-      <input type="text" id="lastName" placeholder="Last name" (blur)="validateLastName()">
+      <input type="text" id="lastName" placeholder="Last name" (blur)="validateLastName()" required>
       <div *ngIf="lastNameError" class="error-message">{{ lastNameError }}</div>
     </div>
     <div class="form-item">
-      <input type="text" id="phoneNumber" placeholder="Phone Number" (blur)="validatePhoneNumber()">
+      <input type="text" id="phoneNumber" placeholder="Phone Number" (blur)="validatePhoneNumber()" required>
       <div *ngIf="phoneNumberError" class="error-message">{{ phoneNumberError }}</div>
     </div>
     <div class="form-item">
@@ -33,7 +33,7 @@
 
   </div>
   <div class="save">
-    <button type="button" class="save-button" (click)="uploadFile()" routerLink="/listofcustomers">Save</button>
+    <button type="button" class="save-button" (click)="uploadFile()" routerLink="/listofcustomers" [disabled]="isSaveButtonDisabled">Save</button>
     <button type="button" class="Cancel-button" routerLink="/listofcustomers">Cancel</button>
   </div>
 </div>
