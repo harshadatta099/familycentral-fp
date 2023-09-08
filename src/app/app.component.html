@@ -1,20 +1,20 @@
 <div class="container-fluid">
     <div class="row">
-        <!-- Sidebar -->
-        <div class="col-md-1">
+        <!-- Sidebar - Show only if not 'landing' route -->
+        <div class="col-md-1" *ngIf="!isLandingRoute">
             <app-sidebar></app-sidebar>
         </div>
 
-        <div class="col-md-11 ">
+        <div class="col-md-11">
             <div class="row" style="background-color: #FFFF;">
-                <div class="col">
+                <!-- Header - Show only if not 'landing' route -->
+                <div class="col" *ngIf="!isLandingRoute">
                     <app-header></app-header>
                 </div>
             </div>
 
-            
             <div class="row">
-                <div class="ml col offset-md-1  justify-content-md-center">
+                <div class="ml col offset-md-1 justify-content-md-center">
                     <router-outlet></router-outlet>
                 </div>
             </div>

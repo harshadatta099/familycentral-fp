@@ -11,10 +11,11 @@ import { HelpComponent } from './components/help/help.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { LogoutComponent } from './components/logout/logout.component';
 import { HeaderComponent } from './components/header/header.component';
-import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddcustomerComponent } from './components/addcustomer/addcustomer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { FormsModule } from '@angular/forms';
     SettingsComponent,
     LogoutComponent,
     HeaderComponent,
-    AddcustomerComponent
+    AddcustomerComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

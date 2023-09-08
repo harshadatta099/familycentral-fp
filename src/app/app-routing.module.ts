@@ -6,17 +6,19 @@ import { UpdateDocumentsComponent } from './components/update-documents/update-d
 import { HelpComponent } from './components/help/help.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { LogoutComponent } from './components/logout/logout.component';
-import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddcustomerComponent } from './components/addcustomer/addcustomer.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 const routes: Routes = [
   {path:'profile', component:ProfileComponent},
+  {path:'landing',component:LandingPageComponent},
   {path:'listofcustomers', component:ListofCustomersComponent},
   {path:'updatedocuments', component:UpdateDocumentsComponent},
   {path:'help', component: HelpComponent},
   {path:'settings', component:SettingsComponent},
   {path:'logout', component:LogoutComponent},
   {path:'addcustomer',component:AddcustomerComponent},
-  {path:'**', redirectTo:'/profile', pathMatch:'full'}
+  {path:'**', redirectTo:'/landing', pathMatch:'full'}
 ];
 
 @NgModule({
