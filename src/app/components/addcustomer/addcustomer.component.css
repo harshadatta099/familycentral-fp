@@ -77,8 +77,8 @@
     .form-item-5 textarea {
       width: 100%;
       border: 1px solid #ccc;
-      border-radius: 10px; /* Adjust the border radius as needed */
-      padding: 12px;
+      border-radius: 8px; 
+      padding: 20px;
       box-sizing: border-box;
     }
     .body-container-2-formblock
@@ -118,8 +118,8 @@
   .form-item-5 textarea {
     width: 100%;
     border: 1px solid #ccc;
-    border-radius: 10px; /* Adjust the border radius as needed */
-    padding: 12px;
+    border-radius: 8px; 
+    padding: 20px;
     box-sizing: border-box;
   }
 
@@ -201,5 +201,8 @@
 }
 
 
-
+input{
+  height:58px;
+  border-radius: 8;
+}
 
