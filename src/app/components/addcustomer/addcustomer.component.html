@@ -34,7 +34,7 @@
         <div
           *ngIf="
             customerForm?.get('lastName')?.invalid &&
-            (customerForm?.get('last')?.touched ||
+            (customerForm?.get('lastName')?.touched ||
               customerForm.get('lastName')?.dirty)
           "
           class="error-message"
