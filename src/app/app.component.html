@@ -9,7 +9,7 @@
             <div class="row" style="background-color: #FFFF;">
                 <!-- Header - Show only if not 'landing' route -->
                 <div class="col" *ngIf="!isLandingRoute">
-                    <app-header></app-header>
+                    <app-header [name]="name"></app-header>
                 </div>
             </div>
 

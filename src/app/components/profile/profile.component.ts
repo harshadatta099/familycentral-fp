@@ -1,5 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
 import { ApiService } from 'src/app/api.service';
+import { SharedServiceService } from 'src/app/shared-service.service';
 
 @Component({
   selector: 'app-profile',
@@ -13,7 +14,7 @@ export class ProfileComponent implements OnInit {
   phoneNumberError: string = '';
   emailError: string = '';
 
-  constructor(private apiService :ApiService) {}
+  constructor(private apiService :ApiService,private sharedDataService: SharedServiceService) {}
 
   ngOnInit() {
     
@@ -21,11 +22,14 @@ export class ProfileComponent implements OnInit {
       (response) => {
         this.data = response;
         console.log(this.data);
+        this.sendDataToParent(this.data.data.firstName);
       },
       (error) => {
         console.error('Error fetching data:', error);
       }
     );
+   
+    
   }
   displayStyle = "none";
   
@@ -56,6 +60,12 @@ export class ProfileComponent implements OnInit {
     const email = (document.getElementById("email") as HTMLInputElement).value;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     this.emailError = !email.match(emailPattern) ? 'Please enter a valid email address.' : '';
+  }
+
+ 
+  sendDataToParent(name:string) {
+    const dataToSend = name;
+    this.sharedDataService.sendDataToParent(dataToSend);
   }
 
 }

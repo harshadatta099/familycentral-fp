@@ -1,19 +1,31 @@
-import { Component } from '@angular/core';
+import { Component ,OnInit} from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
+import { SharedServiceService } from './shared-service.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+
+  name: string | undefined;
+//  name='sarvani';
+
    // Inject Router service
-   constructor(private router: Router) {
+   constructor(private sharedDataService: SharedServiceService,private router: Router) 
+   {
     // Subscribe to router events
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.checkRoute();
       }
+    });
+  }
+  
+  ngOnInit() {
+    this.sharedDataService.data$.subscribe((data) => {
+      this.name = data;
     });
   }
 
@@ -25,4 +37,5 @@ export class AppComponent {
     const currentRoute = this.router.url.split('/').pop();
     this.isLandingRoute = currentRoute === 'landing';
   }
+  
 }

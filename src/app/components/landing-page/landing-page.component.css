@@ -1,0 +1,23 @@
+.py-5>img {
+width: 778px;
+height: 725px;
+/* margin-top: 15px; */
+}
+
+div {
+    font-family: Sofia Pro Soft;
+}
+
+h1 {
+    width:671px;
+    height:178px;
+    font-size: 85px;
+    line-height: 92px;
+}
+
+p {
+    font-size: 24px;
+    width: 617px;
+    height: 188px;
+    line-height: 35px;
+}

@@ -1,111 +1,79 @@
 <div class="body-container-2">
-  <div class="body-container-2-header">
-    <h1>Add Customer</h1>
-  </div>
-  <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
-    <div class="body-container-2-formblock">
-      <div class="form-item">
-        <input
-          type="text"
-          id="firstName"
-          class="form-control"
-          placeholder="First name"
-          formControlName="firstName"
-        />
-        <div
-          *ngIf="
-            customerForm?.get('firstName')?.invalid &&
-            (customerForm?.get('firstName')?.touched ||
-              customerForm.get('firstName')?.dirty)
-          "
-          class="error-message"
-        >
-          First name is required
-        </div>
-      </div>
-      <div class="form-item">
-        <input
-          type="text"
-          id="lastName"
-          class="form-control"
-          placeholder="Last name"
-          formControlName="lastName"
-        />
-        <div
-          *ngIf="
-            customerForm?.get('lastName')?.invalid &&
-            (customerForm?.get('lastName')?.touched ||
-              customerForm.get('lastName')?.dirty)
-          "
-          class="error-message"
-        >
-          Last name is required
-        </div>
-      </div>
-      <div class="form-item">
-        <input
-          type="tel"
-          class="form-control"
-          id="phoneNumber"
-          placeholder="Phone Number"
-          formControlName="phoneNumber"
-        />
-        <div
-          *ngIf="
-            customerForm?.get('phoneNumber')?.invalid &&
-            (customerForm?.get('phoneNumber')?.touched ||
-              customerForm.get('phoneNumber')?.dirty)
-          "
-          class="error-message"
-        >
-          Phone Number is required
-        </div>
-      </div>
-      <div class="form-item">
-        <input
-          type="text"
-          id="email"
-          class="form-control"
-          placeholder="Email"
-          formControlName="email"
-        />
-        <div
-          *ngIf="
-            customerForm?.get('email')?.invalid &&
-            (customerForm?.get('email')?.touched ||
-              customerForm.get('email')?.dirty)
-          "
-          class="error-message"
-        >
-          email is required
-        </div>
-      </div>
 
-      <div class="form-item form-item-5">
-        <textarea
-          id="message"
-          class="form-control"
-          rows="5"
-          cols="160"
-          placeholder="Message"
-          formControlName="message"
-        ></textarea>
-      </div>
+  <div class="body-container-2-header">
+
+    <h1>Add Customer</h1>
+
+  </div>
+
+  <div class="body-container-2-formblock">
+
+    <div class="form-item">
+
+      <input type="text" id="firstName" placeholder="First name" (blur)="validateFirstName()" required>
+
+      <div *ngIf="firstNameError" class="error-message">{{ firstNameError }}</div>
+
     </div>
-    <div class="upload-Document">
-      <p>
-        <span
-          ><a href="#" target="_self" style="color: rgba(6, 184, 255, 1)"
-            >Upload Document if any...</a
-          ></span
-        >( optional )
-      </p>
+
+    <div class="form-item">
+
+      <input type="text" id="lastName" placeholder="Last name" (blur)="validateLastName()" required>
+
+      <div *ngIf="lastNameError" class="error-message">{{ lastNameError }}</div>
+
     </div>
-    <div class="save">
-      <button type="submit" class="save-button">Save</button>
-      <button type="button" class="Cancel-button" routerLink="/listofcustomers">
-        Cancel
-      </button>
+
+    <div class="form-item">
+
+      <input type="text" id="phoneNumber" placeholder="Phone Number" (blur)="validatePhoneNumber()" required>
+
+      <div *ngIf="phoneNumberError" class="error-message">{{ phoneNumberError }}</div>
+
     </div>
-  </form>
+
+    <div class="form-item">
+
+      <input type="text" id="email" placeholder="Email" (blur)="validateEmail()">
+
+      <div *ngIf="emailError" class="error-message">{{ emailError }}</div>
+
+    </div>
+
+    <div class="form-item form-item-5">
+
+      <textarea id="message" rows="5" cols="160" placeholder="Message"></textarea>
+
+    </div>
+
+  </div>
+
+  <div class="upload-Document">
+
+    <!-- <p><span><a href="#" target="_self" style="color:rgba(6, 184, 255, 1);">Upload Document if any...</a></span>(
+
+      optional )</p> -->
+
+      <label for="selectFile" class="custom-file-upload" style="text-align: center;" >
+
+        Upload Document if any...
+
+      </label>
+
+      <input type="file" id="selectFile" #selectFile style="display:none;" (change)="onFileSelected($event)">
+
+ 
+
+  </div>
+
+  <div class="save">
+
+    <button type="button" class="save-button" (click)="uploadFile()" routerLink="/listofcustomers" [disabled]="isSaveButtonDisabled">Save</button>
+
+    <button type="button" class="Cancel-button" routerLink="/listofcustomers">Cancel</button>
+
+  </div>
+
 </div>
+
+ 

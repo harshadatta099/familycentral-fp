@@ -1,208 +1,409 @@
 .Main-container {
+
   width: 100%;
+
   height: 100%;
+
   background-color:white;
+
   position: absolute;
+
   top: 0;
+
   left: 0;
+
   display: flex;
+
   flex-direction: row;
-}
-.nav-bar-container{
-  /* background-color: black; */
-  width: 15%;
-  flex-direction: column;
-}
-.nav-bar-container>p{
-  color: azure;
-}
-.body-container{
-  background-color: rgba(249, 249, 249, 1);
-  width:100%;
-}
-@media (max-width: 768px) {
-  /* Hide the normal navbar */
-  .nav-bar-container {
-      display: none;
-  }   
-}
-.body-container-1{
-  height: 15%;
-  background-color: #0f0101;
-  border-color: black;
-  justify-content: right;
-}
-.form-container-body-container-1
-{
-  height: 85%;
-}
-.body-container-2
-{
-  height: 100%;
-  background-color:rgba(249, 249, 249, 1);
-  margin-left:2%;
-}
-.body-container-2-header
-{
-  width:100%;
-}
-.body-container-2-header{
-  max-height: fit-content;
-  display: flex;
-  padding: auto;
-  flex-direction: row;
-  border: 1px solid transparent; /* Just for visualization */
-}
-@media (min-width:768px)
-{
-  .body-container-2 {
-    margin-left: 60px;
-  }
-  .body-container-2-formblock {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 10px;
-      max-width: fit-content;
-      max-height: fit-content;
-    }
-  
-    .form-item {
-      grid-column: span 1;
-    }
-  
-    .form-item-5 {
-      grid-column: span 2;
-    }
-    .form-item input[type="text"],
-    .form-item-5 textarea {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px; 
-      padding: 20px;
-      box-sizing: border-box;
-    }
-    .body-container-2-formblock
-    {
-      padding-left:25px;
-      padding-right: 25px;
-      padding-top: 5px;
-      padding-bottom: 10px;
-    }
-    .body-container-2-header
-    {
-      padding-left:25px;
-      padding-top: 10px;
-      padding-bottom: 5px;
-    }
-    #input51
-    {
-      display: none;
-    }
-    #input5
-    {
-      display: block;
-    }
+
 }
 
-@media (max-width:768px)
+.nav-bar-container{
+
+  /* background-color: black; */
+
+  width: 15%;
+
+  flex-direction: column;
+
+}
+
+.nav-bar-container>p{
+
+  color: azure;
+
+}
+
+.body-container{
+
+  background-color: rgba(249, 249, 249, 1);
+
+  width:100%;
+
+}
+
+@media (max-width: 768px) {
+
+  /* Hide the normal navbar */
+
+  .nav-bar-container {
+
+      display: none;
+
+  }  
+
+}
+
+.body-container-1{
+
+  height: 15%;
+
+  background-color: #0f0101;
+
+  border-color: black;
+
+  justify-content: right;
+
+}
+
+.form-container-body-container-1
+
 {
-  .body-container-2-formblock {
-     flex-direction: row;
-      max-width: fit-content;
-      max-height: fit-content;
-    }
-  .form-item{
-      padding-top: 20px;
+
+  height: 85%;
+
+}
+
+.body-container-2
+
+{
+
+  height: 100%;
+
+  background-color:rgba(249, 249, 249, 1);
+
+  margin-left:2%;
+
+}
+
+.body-container-2-header
+
+{
+
+  width:100%;
+
+}
+
+.body-container-2-header{
+
+  max-height: fit-content;
+
+  display: flex;
+
+  padding: auto;
+
+  flex-direction: row;
+
+  border: 1px solid transparent; /* Just for visualization */
+
+}
+
+@media (min-width:768px)
+
+{
+
+  .body-container-2 {
+
+    margin-left: 60px;
+
   }
+
+  .body-container-2-formblock {
+
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      grid-gap: 10px;
+
+      max-width: fit-content;
+
+      max-height: fit-content;
+
+    }
+
+ 
+
+    .form-item {
+
+      grid-column: span 1;
+
+    }
+
+ 
+
+    .form-item-5 {
+
+      grid-column: span 2;
+
+    }
+
+    .form-item input[type="text"],
+
+    .form-item-5 textarea {
+
+      width: 100%;
+
+      border: 1px solid #ccc;
+
+      border-radius: 10px; /* Adjust the border radius as needed */
+
+      padding: 12px;
+
+      box-sizing: border-box;
+
+    }
+
+    .body-container-2-formblock
+
+    {
+
+      padding-left:25px;
+
+      padding-right: 25px;
+
+      padding-top: 5px;
+
+      padding-bottom: 10px;
+
+    }
+
+    .body-container-2-header
+
+    {
+
+      padding-left:25px;
+
+      padding-top: 10px;
+
+      padding-bottom: 5px;
+
+    }
+
+    #input51
+
+    {
+
+      display: none;
+
+    }
+
+    #input5
+
+    {
+
+      display: block;
+
+    }
+
+}
+
+ 
+
+@media (max-width:768px)
+
+{
+
+  .body-container-2-formblock {
+
+     flex-direction: row;
+
+      max-width: fit-content;
+
+      max-height: fit-content;
+
+    }
+
+  .form-item{
+
+      padding-top: 20px;
+
+  }
+
   .form-item input[type="text"],
+
   .form-item-5 textarea {
+
     width: 100%;
+
     border: 1px solid #ccc;
-    border-radius: 8px; 
-    padding: 20px;
+
+    border-radius: 10px; /* Adjust the border radius as needed */
+
+    padding: 12px;
+
     box-sizing: border-box;
+
   }
 
   .body-container-2-formblock
+
   {
+
     padding-left:25px;
+
     padding-right: 25px;
+
     padding-top: 5px;
+
     padding-bottom: 10px;
+
   }
+
   .body-container-2-header
+
   {
+
     padding-left:25px;
+
     padding-top: 10px;
+
     padding-bottom: 5px;
+
   }
+
   #input51
+
   {
+
     display: block;
+
   }
+
   #input5
+
   {
+
     display: none;
+
   }
-}
-.upload-Document
-{
-  padding-left: 25px;
-  padding-top: 2px;
-}
-.save-button{
-  background-color: black;
-  height: 20%;
-}
-.save {
-  display: flex;
-  text-align: center;
-  justify-content: left;
-  padding-left: 25px;
-  padding-top: 80px;
-  padding-bottom: 20px;
-  border: 0;
-  gap:20px;
-  align-items: center;
-  height: 40px; /* Adjust to your needs */
+
 }
 
-.save-button {
-  background-color:  rgba(243, 85, 100, 1);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  Width:203px;
-  Height:48px;
-  Top:699px;
-  Left:221px;
-  border-radius:30px;
-}
-.Cancel-button
+.upload-Document
+
 {
-  background-color: white;
-  color:  rgba(243, 85, 100, 1);
-  padding: 10px 20px;
-  border-color:rgba(243, 85, 100, 1);
-  border-radius: 5px;
-  cursor: pointer;
-  Width:203px;
-  Height:48px;
-  Top:699px;
-  Left:221px;
-  border-radius:30px
+
+  padding-left: 25px;
+
+  padding-top: 2px;
+
 }
+
+.save-button{
+
+  background-color: black;
+
+  height: 20%;
+
+}
+
+.save {
+
+  display: flex;
+
+  text-align: center;
+
+  justify-content: left;
+
+  padding-left: 25px;
+
+  padding-top: 80px;
+
+  padding-bottom: 20px;
+
+  border: 0;
+
+  gap:20px;
+
+  align-items: center;
+
+  height: 40px; /* Adjust to your needs */
+
+}
+
+ 
+
+.save-button {
+
+  background-color:  rgba(243, 85, 100, 1);
+
+  color: white;
+
+  padding: 10px 20px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  Width:203px;
+
+  Height:48px;
+
+  Top:699px;
+
+  Left:221px;
+
+  border-radius:30px;
+
+}
+
+.Cancel-button
+
+{
+
+  background-color: white;
+
+  color:  rgba(243, 85, 100, 1);
+
+  padding: 10px 20px;
+
+  border-color:rgba(243, 85, 100, 1);
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  Width:203px;
+
+  Height:48px;
+
+  Top:699px;
+
+  Left:221px;
+
+  border-radius:30px
+
+}
+
 .error-message {
+
+ 
 
   color:red;
 
+ 
+
 }
 
+ 
 
-input{
-  height:58px;
-  border-radius: 8;
-}
+ 
 
+ 
+
+ 
+
+ 
